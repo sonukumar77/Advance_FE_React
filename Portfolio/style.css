@@ -1,0 +1,133 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.left{
+    width: 25%;
+    height: 100vh;
+    background-color: beige;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+    padding: 15px;
+    box-sizing: border-box;
+    text-align: center;
+    
+    
+}
+.profile-img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    /* object-fit: cover; */
+    object-fit:fill;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    
+}
+.name-heading{
+    margin-top: 30px;
+    font-size: 2.5rem;
+}
+.bio{
+    margin-top: 20px;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.connect_btn{
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    background-color: orangered;
+    color: white;
+    border-radius: 20px;
+    text-align: center;
+    cursor: pointer;
+
+
+}
+.right{
+    width: 75%;
+    height: 100vh;
+    background-color: rgb(134, 134, 21);
+    overflow: auto;
+}
+.nav-container{
+    background-color: antiquewhite;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    flex-wrap: wrap;
+    margin: 10px;
+    border-radius: 5px;
+    padding: 10px;
+    position: sticky;
+    top: 0px;
+    
+}
+.nav-container .navbar-brand{
+    /* background-color:aqua; */
+    padding: 0px 10px;
+    margin: 0px 20px
+}
+.nav-container  ul{
+    /* background-color: aqua; */
+    padding: 0px 10px;
+    margin: 0px 20px;
+    display: flex;
+}
+.nav-container  ul li{
+    /* background-color: rgb(219, 164, 11); */
+    display: block;
+    padding: 0px 10px;
+    margin: 0px 20px;
+    list-style: none;
+    
+}
+.nav-container  ul li a{
+    /* background-color: rgb(79, 180, 20); */
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+.nav-container  ul li a:hover{
+    font-weight: 700;
+    color: rgb(134, 134, 21);
+    letter-spacing: 1px;
+    transition: all 0.5s ease-in;
+    
+}
+.right-content-container{
+    padding: 10px;
+}
+
+/* responsive */
+@media screen and  (max-width:850px){
+    .container{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .left{
+        width: 100%;
+    }
+    .right{
+        width: 100%;
+    }
+    
+}
+@media (min-width:200px) and  (max-width:500px){
+    .nav-container ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-top: 10px;
+    }
+}
