@@ -1,0 +1,212 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container-wrapper{
+    display: flex;
+    flex-direction: column;
+
+}
+
+/*  ============================================== start top-navbar CSS =================================== */
+.navbar-section{
+    /* background-color: blueviolet; */
+    width: 100%;
+    height: 11vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 20px;
+}
+.navbar-section .navbar-left-content{
+    /* background-color: rgb(146, 192, 40); */
+    display: flex;
+    align-items: center;
+    width: 20%;
+    
+}
+.navbar-section .navbar-left-content .brand-img{
+    width: 25%;
+    height: 25%;
+}
+.navbar-section .navbar-left-content .navbar-title{
+  padding-left: 10px;
+}
+.navbar-section .navbar-middle-content{
+    /* background-color: rgb(230, 21, 6); */
+    width: 60%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding-left: 5px;
+
+}
+/* .navbar-section .navbar-middle-content i{
+    top: 50%;
+    right: 50%;
+    transform: translate(100%,-10%);
+
+} */
+.navbar-section .navbar-middle-content .search-box{
+    width: 95%;
+    height: 70%;
+    border: none;
+    padding-left: 15px;
+    outline: none;
+    border-radius: 10px;
+    background-color: #F1F3F4;
+    font-size: 18px;
+}
+.navbar-section .navbar-right-content{
+    /* background-color: rgb(145, 14, 112); */
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    cursor: pointer;
+}
+.navbar-section .navbar-right-content .left-icons i{
+   padding: 10px;
+   font-size: 20px;
+}
+.navbar-section .navbar-right-content .left-icons i:hover{
+background-color: #E0E0E0;
+border-radius: 50%;
+}
+
+.navbar-section .navbar-right-content .right-icons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+
+}
+.navbar-section .navbar-right-content .right-icons i{
+   padding: 10px;
+   font-size: 20px;
+}
+.navbar-section .navbar-right-content .right-icons i:hover{
+    background-color: #E0E0E0;
+    border-radius: 50%;
+}
+.navbar-section .navbar-right-content .right-icons .profile_img{
+   width: 35px;
+   height: 35px;
+   border-radius: 50%;
+   margin-left: 10px;   
+   /* object-fit: cover; */
+}
+
+.hr-divider{
+outline: none;
+box-shadow: none;
+/* color: #ca0303; */
+}
+
+/*  ============================================== end top-navbar CSS =================================== */
+.body-container{
+display: flex;
+}
+
+
+/*  ============================================== start body-left-sidebar CSS =================================== */
+.body-container .left-sidebar{
+    /* background-color: aqua; */
+    width: 20%;
+    height: 88vh;
+    padding: 20px;
+}
+.body-container .left-sidebar .add-btn{
+    background-color: white;
+    width: 60%;
+    padding: 10px 20px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    color: black;
+    border-radius: 30px;
+    border: none;
+    word-spacing: 5px;
+    margin: 7px;
+    text-align: center;
+    font-size: 1.2rem;
+    
+}
+.body-container .left-sidebar .add-btn i{
+   padding-right: 20px;
+    font-size: 2rem;
+    
+}
+.body-container .left-sidebar .add-btn span{
+   text-align: center;
+    font-size:1.2rem;
+    font-weight: 500;
+  
+    
+}
+
+.body-container .left-sidebar ul li{
+    /* background-color: #ca0303; */
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    /* justify-content: space-around; */
+    padding: 7px 0px;
+    
+}
+.body-container .left-sidebar ul li a{
+    /* background-color: rgb(104, 72, 9); */
+    margin-top: 2px;
+    padding: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    color: rgb(102, 101, 101);
+}
+.body-container .left-sidebar ul li a:hover{
+    /* background-color: #E8F0FE; */
+    background-color: #f5f5f5;
+    border-radius: 0px 20px 20px 0px;
+    
+}
+.body-container .left-sidebar ul li a:active{
+    background-color: #E8F0FE;
+    
+    
+}
+.body-container .left-sidebar ul li a i{
+    /* background-color: rgb(56, 39, 6); */
+    margin-right: 20px;
+    font-size: 20px;
+    color: rgb(119, 117, 117);
+}
+.buy-storage-btn{
+    padding: 5px 10px;
+    border: 1px solid gray;
+    font-weight: 600;
+    color: rgb(54, 54, 192);
+    text-align: center;
+}
+
+/*  ============================================== end  body-left-sidebarCSS =================================== */
+
+
+/*  ============================================== start body-right-sidebarCSS =================================== */
+.body-container .middle-container{
+    width: 75%;
+    height: 88vh;
+    background-color: rgb(30, 170, 25);
+    
+   
+
+}
+/*  ============================================== end  body-middle-sidebarCSS =================================== */
+/*  ============================================== start body-middle-sidebarCSS =================================== */
+.body-container .right-sidebar{
+    width: 5%;
+    height: 88vh;
+    background-color: rgb(69, 25, 170);
+
+}
+/*  ============================================== end  body-right-sidebarCSS =================================== */
+
