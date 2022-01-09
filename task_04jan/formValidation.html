@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form validation</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body{
+            background: url("https://images.pexels.com/photos/719609/pexels-photo-719609.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+.container{
+    width: 500px;
+    height: 80vh;
+    margin: 50px auto;
+    background-color:#00ffff;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    /* display: flex;
+    justify-content:first baseline;
+    align-items: center; */
+}
+
+#myForm{
+    width: 100%;
+    height: auto;
+    /* background-color: brown; */
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+}
+.form-group{
+/* background-color: yellow; */
+display: flex;
+flex-direction: column;
+}
+label{
+    display: block;
+    padding: 15px 15px 10px 0px;
+}
+.form-control{
+width: 100%;
+height: 2rem;
+outline: none;
+border: none;
+font-size: 1.2rem;
+padding-left: 0.5rem;
+
+}
+.btn{
+    padding: 10px 40px;
+    margin: 15px 0px;
+    font-size: 1.2rem;
+    background-color: rgb(61, 190, 61);
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.is-error{
+    background-color: rgb(250, 219, 224);
+    border: 2px solid red;
+    
+}
+.success{
+    background-color: rgb(136, 211, 136);
+    border: 2px solid green;
+}
+.has-error{
+    color: red;
+    
+}
+
+/* .btn .disabled{
+    cursor: not-allowed;
+} */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form id="myForm">
+            <h2>Registration Form</h2>
+            <div class="form-group">
+                <label for="">Name</label>
+                <input type="text" name="name" id="name" class="form-control ">
+                <span class="has-error" id="errorName"></span>
+            </div>
+            <div class="form-group">
+                <label for="">Email:</label>
+                <input type="email" name="email" id="email" class="form-control">
+                <span class="has-error" id="errorEmail"></span>
+            </div>
+            <div class="form-group">
+                <label for="">password</label>
+                <input type="password" name="password" id="password" class="form-control">
+                <span class="has-error" id="errorPassword"></span>
+            </div>
+            <div class="form-group">
+                <label for="">Confirm Password</label>
+                <input type="cpassword" name="cpassword" id="cpassword" class="form-control">
+                <span class="has-error" id="errorCpassword"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" name="btn" id="register_btn" class="btn disabled" value="Register">
+            </div>
+        </form>
+    </div>
+
+
+
+
+
+    <script src="script.js"></script>
+    <script>
+        var nameRef =document.getElementById("name");
+        var emailRef =document.getElementById("email");
+        var passRef =document.getElementById("password");
+        var cpassRef =document.getElementById("cpassword");
+        var btnRef =document.getElementById("register_btn");
+
+        var errorNameRef =document.getElementById("errorName");
+        var errorEmailRef =document.getElementById("errorEmail");
+        var errorPasswordRef =document.getElementById("errorPassword");
+        var errorCpasswordRef =document.getElementById("errorCpassword");
+
+        function validateForm(e){
+            e.preventDefault()
+
+            if(nameRef.value == "" )
+            {
+                nameRef.classList.add("is-error");
+                errorNameRef.innerText="Name is required";
+                return false;
+                
+            }
+            else if(nameRef.value.length < 5)
+            {
+                nameRef.classList.add("is-error");
+                errorNameRef.innerText="Length should be more than 5";
+                return false;
+            }
+            else 
+            {
+                nameRef.classList.remove("is-error");
+                nameRef.classList.add("success");
+                errorNameRef.innerText="";
+            }
+            
+            if(emailRef.value == "" )
+            {
+                emailRef.classList.add("is-error");
+                errorEmailRef.innerText="Email is required";
+                return false;
+            }
+            else
+            {
+                emailRef.classList.remove("is-error");
+                emailRef.classList.add("success");
+                errorEmailRef.innerText="";
+            } 
+            
+            if(passRef.value == "" )
+            {
+                passRef.classList.add("is-error");
+                errorPasswordRef.innerText="Password is required";
+                return false;
+            }
+            else if(passRef.value.length < 8 )
+            {
+                passRef.classList.add("is-error");
+                errorPasswordRef.innerText="length should be more than 8";
+                return false;
+            }
+            else 
+            {
+                passRef.classList.remove("is-error");
+                passRef.classList.add("success");
+                errorPasswordRef.innerText="";
+                
+                
+            }
+
+            if(cpassRef.value == "" )
+            {
+                cpassRef.classList.add("is-error");
+                errorCpasswordRef.innerText="Password is required.";
+                return false;
+            }
+            else if(cpassRef.value.length < 8 )
+            {
+                cpassRef.classList.add("is-error");
+                errorCpasswordRef.innerText="Length should be more than 8";
+                return false;
+            }
+            else
+            {   
+                cpassRef.classList.remove("is-error");
+                cpassRef.classList.add("success");
+                errorCpasswordRef.innerText="";
+                
+            }
+
+            if(passRef.value.length != cpassRef.value.length){
+                cpassRef.classList.add("is-error");
+                errorCpasswordRef.innerText="Confirm Pasword not matched.";
+                return false;
+            }
+            else
+            {
+                cpassRef.classList.add("success");
+                errorCpasswordRef.innerText="";
+            }
+
+            // if(passRef.value == "" || passRef.value == ""){
+            //     btnRef.classList.add("disable");
+            // }
+
+        }
+
+
+        btnRef.addEventListener('click',validateForm);
+        
+
+    </script>
+</body>
+</html>

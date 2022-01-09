@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fizz Buzz App</title>
+    <style>
+        body{
+    background:url('https://images.pexels.com/photos/4068379/pexels-photo-4068379.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.container{
+    background-color:rgb(204, 134, 211);
+    color: blue;
+    margin-top: 50px;
+    margin-left: 400px;
+    width: 40vw;
+    height: 200px;
+    text-align: center;
+    padding-top: 40px;
+}
+
+h2{
+    color: brown;
+    font-size: 30px;
+}
+
+h3{
+    text-align: center;
+    font-size: 30px;
+    color: yellow;
+}
+h4{
+    text-align: center;
+    color: rgb(4, 0, 255);
+}
+input{
+    
+    width: 200px;
+    height: 30px;
+    font-size: 25px;
+    padding-left: 10px;
+}
+button{
+    padding: 10px 10px 4px 10px;
+    font-size: 15px;
+    background-color: green;
+    color: white;
+    cursor: pointer;
+
+}
+#output{
+    background-color:rgb(14, 13, 13);
+    color: rgb(255, 255, 255);
+    margin-left: 400px;
+    width: 40vw;
+    height: 200px;
+    padding-top: 40px;
+    
+}
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+        <h2>Fizz Buzz App</h2>
+        <h4>Please Enter Number</h4>
+        <input type="number" id="input">
+        <button id="button">Click me</button>
+        </div>
+    
+        <h3>Output</h3>
+        <pre id="output" class="output">
+    
+        </pre>
+    <script>
+
+        let btn = document.getElementById('button');
+        // let op =document.getElementById("output")
+        let inp = document.getElementById('input');
+        let string = "";
+       
+        function checkNumber(n){
+
+            
+            for(let i=1;i<=n;i++)
+            {  
+                 if((i%3 == 0) && (i%5 == 0))
+                {
+                    // console.log("FizzBuzz");
+                    // op.innerText = "FizzBuzz";
+                    string += "FizzBuzz";
+                    string += "\n";
+                }
+                else
+                {  
+                    if(i%3 == 0)
+                    {
+                        // console.log("Fizz");
+                        string += "Fizz"
+                        string += "\n"
+                    }
+                    else if(i%5 == 0)
+                    {
+                        // console.log("Buzz  ");
+                        string += "Buzz"
+                        string += "\n"
+                    }
+                    else
+                    {
+                        // console.log(i);
+                        string += i;
+                        string += "\n"
+                    }
+
+                }
+            }
+
+        }
+        ;
+        btn.addEventListener('click', function (){
+            checkNumber(inp.value);
+
+            document.getElementById("output").innerText = string;
+        });
+       
+    </script>
+</body>
+</html>

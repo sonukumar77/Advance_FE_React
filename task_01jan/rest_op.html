@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: blueviolet;
+        }
+        .container{
+            width: 500px;
+            height: 40vh;
+            margin: 50px auto;
+            background-color: aqua;
+        }
+        h1,p{
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- <input type="text" id="inputBox">
+    <input type="submit" id="btn"> -->
+    <div class="container">
+        <h1>Minimum number in array</h1>
+        <p id="para"></p>
+    </div>
+    
+    
+    <script>
+      
+        let btnRef= document.getElementById("btn");
+        let paraRef= document.getElementById("para");
+        
+        function minimum(...arr)
+        {
+            let minVal = arr[0];
+            for(let i=0 ;i<arr.length;i++)
+            {
+                if(arr[i] < minVal)
+                {
+                    minVal = arr[i];
+                   
+                    
+                }
+               
+                
+            }
+
+            return minVal;
+    
+        }
+
+        let output =  minimum(1,25,-4,-11);
+        paraRef.innerText = output;
+        console.log(output);
+
+    // function xyz () {
+    //     console.log("jnnc")
+    //   }
+
+    //  console.log(btnRef);
+    //  btnRef.addEventListener("click",function()
+    //  {
+    //     let inpRef= document.getElementById("inputBox").value;   
+    //     let output =  minimum(inpRef);
+    //     paraRef.innerText = output;
+    //     console.log(output);
+    //  });
+    </script>
+</body>
+</html>

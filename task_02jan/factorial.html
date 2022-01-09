@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Number</title>
+</head>
+<style>
+    body{
+    background:url('https://cdn.pixabay.com/photo/2017/03/13/10/25/hummingbird-2139278__480.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+div{
+    background-color:rgb(212, 214, 95);
+    color: blue;
+    margin-top: 150px;
+    margin-left: 600px; 
+    width: 40vw;
+    height: 300px;
+    text-align: center;
+    padding-top: 40px;
+}
+
+h3{
+    color: brown;
+}
+
+input{
+    
+    width: 200px;
+    height: 30px;
+    font-size: 25px;
+    padding-left: 10px;
+}
+button{
+    padding: 10px 10px 4px 10px;
+    font-size: 15px;
+    background-color: green;
+    color: white;
+    cursor: pointer;
+
+}
+</style>
+<body>
+    <div>
+        <h1>Find Factorial Of a Number</h1>
+        <h3>Please Enter a Number </h3>
+        <input id="input" type="number">
+       <button id="btn">Submit</button></br></br>
+       <br><br>
+       <p id="para" style="font-size: 30px; font-weight: bold;"></p>
+
+    </div>
+  <script>
+      let inpRef = document.getElementById("input");
+      let paraRef = document.getElementById("para");
+      let btnRef = document.getElementById("btn");
+      function factorial (para){
+
+        if(para == 0)
+        {
+            return 1;
+        }
+        else
+        {
+            return para * factorial(para-1) ;
+        }
+
+      }
+
+     
+
+     btnRef.addEventListener("click",function (){
+        let output =  factorial(inpRef.value);
+        paraRef.innerText = output;
+        //  console.log(output);
+     });
+  </script>
+</body>
+</html>
