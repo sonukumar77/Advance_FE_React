@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #f1f3f6;
+}
+.container-wrapper {
+  width: 100%;
+}
+.top-navbar-container {
+  width: 100%;
+}
+.top-navbar-container .top-navbar {
+  width: 100%;
+  height: 10vh;
+  background-color: #2874f0;
+  display: flex;
+}
+.top-navbar-container .top-navbar .left-content{
+    flex: 3;
+  /* width: 100%;
+  height: auto; */
+  /* background-color: #a3660a; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.top-navbar-container .top-navbar .left-content .logo_img{
+  width: 5rem;
+  height: 2rem;
+  
+}
+.top-navbar-container .top-navbar .left-content .top-search-bar{
+  width: 60%;
+  height: 2rem;
+  margin-left: 0.5rem;
+  padding-left: 1rem;
+  border-radius: 0.1rem;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  
+}
+.top-navbar-container .top-navbar .right-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:center;
+    flex:2;
+    /* background-color:yellow; */
+}
+.top-navbar-container .top-navbar .right-container a{
+    text-decoration: none;
+    padding: 0rem 1rem;
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+
+
+.top-navbar-container .top-sub-navbar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+.top-navbar-container .top-sub-navbar a{
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(24, 23, 23);
+
+}
+
+
+
+.top-navbar-container .top-sub-navbar {
+  width: 100%;
+  height: 6vh;
+  background-color: #ffffff;
+  box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em,
+    rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+  /* background-color: aqua; */
+}
+
+
+.body-wrapper-container{
+/* background-color: blueviolet; */
+width: 100%;
+height: 84vh;
+display: flex;
+
+
+}
+.body-wrapper-container .left-sidebar{
+ width: 20%;
+ height: 100vh;
+ background-color: firebrick;
+ margin: 0.8rem;
+ 
+}
+.body-wrapper-container .left-sidebar ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px 5px;
+ 
+}
+.body-wrapper-container .left-sidebar ul li{
+    list-style: none;
+    border-bottom: 1px solid gray;
+    
+ 
+}
+.body-wrapper-container .left-sidebar ul li a{
+ text-decoration: none;
+ 
+}
+
+
+
+
+.body-wrapper-container .right-container{
+    width: 80%;
+    height: 100vh;
+    background-color: #2874f0;
+    margin: 0.8rem 0.8rem 0.8rem 0;
+
+}

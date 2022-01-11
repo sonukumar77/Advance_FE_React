@@ -1,0 +1,15 @@
+body{
+    font-family: Calibri;
+}
+
+#container{
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}
+
+#myChart{
+    width: 50% !important; 
+    height: 50% !important;
+    margin: auto;
+}
