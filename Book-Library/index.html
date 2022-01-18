@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multistep form</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .add-btn {
+            background-color: green;
+            color: white;
+            padding: 20px;
+            width: 270px;
+            margin: 10px auto;
+            text-align: center;
+            cursor: pointer;
+        }
+        body{
+            /* for background visit heropattern.com */
+            background-color: #DFDBE5;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='%23b4adc0' fill-opacity='0.96'%3E%3Cpath fill-rule='evenodd' d='M11 0l5 20H6l5-20zm42 31a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM0 72h40v4H0v-4zm0-8h31v4H0v-4zm20-16h20v4H20v-4zM0 56h40v4H0v-4zm63-25a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM53 41a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-30 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-28-8a5 5 0 0 0-10 0h10zm10 0a5 5 0 0 1-10 0h10zM56 5a5 5 0 0 0-10 0h10zm10 0a5 5 0 0 1-10 0h10zm-3 46a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM21 0l5 20H16l5-20zm43 64v-4h-4v4h-4v4h4v4h4v-4h4v-4h-4zM36 13h4v4h-4v-4zm4 4h4v4h-4v-4zm-4 4h4v4h-4v-4zm8-8h4v4h-4v-4z'/%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+
+
+        }
+
+        .book {
+            width: 200px;
+            height: 200px;
+            background-color: rgb(100, 98, 102);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        .modal {
+            background-color: rgba(0, 0, 0, 0.5);
+            width: 100vw;
+            height: 100vh;
+            top: 0;
+            left: 0;
+            position: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        form {
+            width: 500px;
+            height: 300px;
+            background-color: brown;
+            
+
+        }
+
+        .cross-icon {
+            width: 30px;
+            height: 30px;
+            /* background-color: white; */
+            cursor: pointer;
+        }
+
+        .heading {
+            background-color: green;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0px 10px;
+        }
+
+        .cross-icon-modal {
+            width: 30px;
+            height: 30px;
+            background-color: white;
+            cursor: pointer;
+            
+        }
+
+        .hide-modal {
+            display: none;
+        }
+
+        .show-modal {
+            display: flex;
+        }
+        .modal-body{
+            /* background-color: blue; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 50px;
+            padding: 20px;
+        }
+        #book_tit{
+            margin: 10px 0px;
+            padding: 10px;
+            font-size: 1.2rem;
+        }
+        #insert-book-btn{
+            background-color: green;
+            color: white;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            border: none;
+            outline: none;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1  class="add-btn" id="add-book-btn">Add Book</h1>
+    <div class="container">
+        <div class="book">
+            <h2 class="book-name" class="book-name">wcdknekdwn</h2>
+            <img src="cross.png" class="cross-icon" alt="cross-icon">
+        </div>
+        <div class="book">
+            <h2 class="book-name" class="book-name">wcdknekdwn</h2>
+            <img src="cross.png" class="cross-icon" alt="cross-icon">
+        </div>
+        <div class="book">
+            <h2 class="book-name" class="book-name">wcdknekdwn</h2>
+            <img src="cross.png" class="cross-icon" alt="cross-icon">
+        </div>
+    </div>
+
+    <div class="modal hide-modal" id="myModal">
+
+        <form>
+            <div class="heading">
+                <h1 class=>sanndc</h1>
+                <img src="cross.png" class="cross-icon-modal" id="closeModal" alt="cross-icon">
+            </div>
+            <div class="modal-body">
+            <input type="text" name="book" id="book_tit" placeholder="Enter Bookname">
+            <button class="insert_book" id="insert-book-btn">Insert Book</button>
+        </div>
+        </form>
+    </div>
+
+    <script>
+        let refcloseModal = document.getElementById("closeModal");
+        let refaddBookBtn = document.getElementById("add-book-btn");
+        let refMyModal = document.getElementById("myModal");
+        let refbook_tit = document.getElementById("book_tit");
+        let refinsert_book_btn = document.getElementById("insert-book-btn");
+       
+        let myBookArr = [];
+        const closeModal = () => {
+            refMyModal.classList.remove("show-modal")
+        }
+
+        const showModal = () => {
+            refMyModal.classList.add("show-modal")
+        }
+
+        function insertBook(e)
+        {
+            e.preventDefault();
+            myBookArr.push(JSON.stringify(book_tit.value))
+            console.log(myBookArr)
+            localStorage.setItem("books",myBookArr)
+            console.log(localStorage.setItem("books",myBookArr))
+            book_tit.value = "";
+        }
+
+        refcloseModal.addEventListener("click", closeModal)
+        refaddBookBtn.addEventListener("click",showModal)
+        refinsert_book_btn.addEventListener("click",insertBook)
+
+
+    </script>
+
+</body>
+
+</html>

@@ -65,4 +65,16 @@ body{
     width: 100px;
     height: 100px;
     background-color: var(--primary-color);
+    font-size: 3.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.X::after{
+    content: "X";
+}
+.O::after{
+    content: "O";
 }

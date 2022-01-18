@@ -1,0 +1,52 @@
+{
+    "Game_Name":"KBC",
+    "full_name":"Kaun Banega Crorepati",
+    "Director":"Amitabh Bacchan",
+    "Date_Of_Play":"10-01-2022",
+    "Questions":[
+        {
+            "id":1,
+            "question_name":"What is the name of current prime ministor of NEPAL",
+            "option_1":"Narendra Modi",         
+            "option_2":"K. P. Sharma Oli",
+            "option_3":"Joe Biden",
+            "option_4":"Sher Bahadur Deuba",
+            "winning_price":1000,
+            "answer":"Sher Bahadur Deuba"
+
+        },
+        {
+            "id":2,
+            "question_name":"which one is  west-flowing river in India",
+            "option_1":"Ganga",         
+            "option_2":"Narmada",
+            "option_3":"Yamuna",
+            "option_4":"Damodar",
+            "winning_price":2000,
+            "answer":"Narmada"
+
+        }, 
+        {
+            "id":3,
+            "question_name":"International Literecy Day observed on ",
+            "option_1":"8 Sep",         
+            "option_2":"18 Nov",
+            "option_3":"28 Oct",
+            "option_4":"18 Aug",
+            "winning_price":3000,
+            "answer":"8 Sep"
+
+        },
+        {
+            "id":4,
+            "question_name":"The Language of Lakshadweep, a union Territory of india  is  ",
+            "option_1":"Telgu",         
+            "option_2":"Malayalam",
+            "option_3":"Kannad",
+            "option_4":"Hindi",
+            "winning_price":5000,
+            "answer":"Malayalam"
+
+        }
+    ]
+}

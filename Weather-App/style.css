@@ -1,0 +1,188 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgb(53, 94, 182);
+}
+.wrapper{
+width: 400px;
+background-color: white;
+border-radius: 10px;
+}
+.wrapper header{
+color: rgb(53, 94, 182);
+font-size: 21px;
+font-weight: 600;
+padding: 16px 15px;
+border-bottom: 1px solid #bfbfbf;
+display: flex;
+align-items: center;
+
+}
+ header i{
+     cursor: pointer;
+     font-size: 30px;
+     margin-right: 10px;
+
+
+}
+.wrapper.active header i{
+    font-size: 30px;
+    margin-left: 5px;
+}
+.wrapper .input-part{
+    
+    margin: 20px 25px 30px;
+}
+.wrapper.active .input-part{
+    display: none;
+}
+.input-part .info-txt{
+    display: none;
+    font-size: 20px;
+    /* background-color: red; */
+    text-align: center;
+    padding: 12px 10px;
+    border-radius: 7px;
+    margin-bottom: 15px;
+
+}
+.input-part .error{
+    display: block;
+    color: rgb(216, 19, 5);
+    background-color: rgb(173, 92, 119);
+    border: 1px solid rgb(184, 169, 138);
+}
+.input-part .pending{
+    display: block;
+    color: rgb(11, 43, 129);
+    background-color: rgb(93, 110, 168);
+    border: 1px solid rgb(226, 213, 188);
+}
+
+.input-part :where(input,button){
+    width: 100%;
+    height: 55px;
+    border: none;
+    outline: none;
+    
+}
+.input-part input{
+    border: 1px solid #bfbfbf;
+    text-align: center;
+    font-size: 20px;
+}
+.input-part input:is(:focus,:valid){
+    border: 2px solid rgb(40, 104, 179);
+}
+.input-part .separator{
+    height: 1px;
+    width: 100%;
+    background-color: #ccc;
+    margin: 25px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.separator::before{
+    content: "or";
+    font-size: 20px;
+    padding: 0 15px;
+    background-color: #fff;
+    color: #ccc;
+
+   
+
+}
+.input-part button{
+    color: #fff;
+    cursor: pointer;
+    background-color: rgb(53, 94, 182);
+}
+
+.wrapper .weather-part{
+    margin: 30px 0 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.wrapper.active .weather-part{
+    display: flex;
+}
+.weather-part img{
+    max-width: 125px;
+}
+.weather-part .temp{
+    display: flex;
+ font-size: 70px;
+ font-weight: 500;
+
+}
+.weather-part .temp .numb{
+    font-weight: 600;
+}
+.weather-part .temp .deg{
+   font-size: 40px;
+   margin: 10px 5px 0 0;
+   display: block;
+}
+.weather-part .location{
+    font-size: 21px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+   
+}
+.location i{
+    font-size: 22px;
+    margin-right: 5px;
+}
+
+.weather-part .bottom-details{
+    /* background-color: rebeccapurple; */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #bfbfbf;
+}
+.bottom-details .column{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   padding: 15px 0;
+}
+.column i{
+    color: skyblue;
+    font-size: 40px;
+}
+.column.humidity{
+    border-left: 1px solid #d1b9b9;
+    /* background-color: red; */
+}
+.details  .temp, .humidity span{
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: -3px;
+}
+.details .temp .deg{
+    margin: 0;
+    padding: 0 2px 0 1px;
+    font-size: 17px;
+}
+
+.details p{
+    font-size: 14px;
+    margin-top: -6px;
+
+}

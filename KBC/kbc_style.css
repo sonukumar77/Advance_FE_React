@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.left {
+    width: 75%;
+    height: 100vh;
+    background-color: rgb(36, 36, 65);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo-container {}
+
+.logo-img {}
+
+.question-container {
+    width: 70%;
+    height: 50%;
+    /* background-color: rgb(151, 107, 107); */
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.timer{
+    width: 60px;
+    height: 100px;
+    background-color: rgb(51, 61, 153);
+    border: 3px solid orange;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    font-weight: 600;
+   
+    
+    
+}
+.question-name{
+    width: 100%;
+    margin: 5px 0px;
+    background-color: rebeccapurple;
+    border: 3px solid orange;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 50px;
+
+}
+.main-question-box{
+    width: 100%;
+    height: 100%;
+    /* background-color: aqua; */
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.col-1{
+    width: 50%;
+    height: 60%;
+    /* background-color: rebeccapurple; */
+    
+}
+.col-2{
+    width: 50%;
+    height: 60%;
+    /* background-color: brown; */
+
+}
+label{
+    margin: 5px;
+    background-color: rebeccapurple;
+    border: 3px solid orange;
+    color: white;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 6px;
+    border-radius: 50px;
+    cursor: pointer;
+    
+}
+label:hover{
+    background-color: orange;
+    color: white;          
+    transition: all 1.4ss ease;
+}
+.main-question-box input[type="radio"]{
+    width: 10px;
+    height: 10px;
+    /* background-color: rgb(107, 114, 114); */
+   
+}
+.main-question-box .option-name{
+    margin-left: 5px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    
+}
+.option{
+    color: orange;
+    padding-right: 5px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding-left: 5px;
+}
+.option:hover{
+    color: white;
+   
+}
+
+.btn-container{
+    width: 100%;
+    /* background-color: blueviolet; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.btn-lock{
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.btn-lock:hover{
+    background-color: brown;
+    color: white;
+    transition: all 0.5s ease-in-out;
+    font-weight: 650;
+ 
+}
+
+.right {
+    width: 25%;
+    height: 100vh;
+    padding: 10px;
+    background-color: rgb(77, 77, 124);
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+.right ul{
+    /* background-color: red; */
+    
+    color: rgb(214, 165, 30);
+}
+.right ul li{
+    list-style: none;
+    /* background-color: aqua; */
+    margin: 5px;
+    padding: 5px;
+  
+}
+.right ul li:hover{
+    background-color: rgb(124, 64, 8);
+    border: 3px solid orange;
+    color: black;
+    cursor: pointer;
+    border-radius: 50px;
+}
+.right ul li .price{
+    padding-left: 10px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    
+    /* background-color: blue; */
+    
+}
