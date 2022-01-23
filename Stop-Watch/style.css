@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+body{
+
+    height: 100vh;
+    background-color: black;
+    display: flex;
+}
+.container{
+    width: 500px;
+    height: 500px;
+    margin: auto;
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.timer{
+    font-size: 70px;
+    font-weight: lighter;
+    color: white;
+    width: 410px;
+    margin-left: 20px;
+}
+
+.bottomPart{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btns{
+    width: 300px;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+}
+.btns button{
+    width: 80px;
+    height: 80px;
+    background-color: transparent;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0px 20px 30px 0px rgba(0, 0, 0, 0.5);
+}
+.btns .toggle{
+    transition: all 0.3s ease;
+    background-color:blueviolet;
+    z-index: 1;
+}
+.btns .toggle:active,
+.btns .reset:active,
+.btns .lap:active{
+    transform: scale(0.9);
+}
+.btns .toggle.on{
+    background-color: tomato;
+}
+.btns .reset,.btns .lap{
+    transition: all 0.3s ease;
+    
+}
+
+.lap_box{
+    width: 200px;
+    height: 200px;
+    color: white;
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
+}
+.lapItem{
+    width: 120px;
+    height: 30px;
+}
