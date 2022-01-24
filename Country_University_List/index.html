@@ -6,9 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Country University List</title>
     <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
     <h1>Country University List</h1>
+    <div class="container">
+        <form method="GET">
+        <input type="text" name="search_box" id="search_box">
+        <input type="submit" name="search_btn" id="search_btn" value="Search 🔎">
+    </form>
+    </div>
+    <div class="container-output">
+        <table>
+            <thead>
+            <tr>
+                <th>University Name</th>
+                <th>Country Name</th>
+                <th>Domain</th>
+                
+            </tr>
+        </thead>
+        <tbody id="tbody">
+
+        </tbody>
+        </table>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
