@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.container-wrapper {
+    /* display: flex; */
+
+}
+
+/*----------------------------- start top navbar-----------------------*/
+.top-nav-container {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    top: 0px;
+    left: 0px;
+    position: fixed;
+    /* background-color: rgb(38, 66, 92); */
+}
+
+.top-nav-container .left-box {
+    width: 22vw;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.top-nav-container .left-box .list-icon-div {
+    width: 6vw;
+    /* background-color: rgb(146, 169, 190); */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 15px;
+    cursor: pointer;
+
+}
+
+.top-nav-container .left-box .logo-div {
+    width: 12vw;
+    /* background-color: rgb(31, 190, 103); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+   
+    
+}
+
+.top-nav-container .left-box .logo-div .yt-logo {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.top-nav-container .middle-box {
+    width: 56vw;
+    height: 10vh;
+    /* background-color: rgb(16, 32, 48); */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-nav-container .middle-box .search-container {
+    width: 80%;
+    /* border: 2px solid gray; */
+    padding: 5px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-nav-container .middle-box .mic {
+    background-color: rgb(245, 241, 241);
+    border-radius: 50%;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.top-nav-container .middle-box .search-container input {
+    width: 90%;
+    padding: 8px;
+    font-size: 1rem;
+    outline: none;
+    border: 1px solid gray;
+
+}
+
+.top-nav-container .middle-box .search-container img {
+
+    text-align: center;
+    width: 30px;
+    height: 38px;
+    padding: 5px 5px;
+    background-color: rgb(245, 243, 243);
+    cursor: pointer;
+
+}
+
+/* start navbar right box */
+
+.top-nav-container .right-box {
+    width: 22vw;
+    height: 10vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* background-color: rgb(73, 15, 68); */
+}
+
+.top-nav-container .right-box img {
+    height: 35px;
+    width: 35px;
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+/* end navbar right box */
+
+/*----------------------------- end top navbar-----------------------*/
+
+
+
+.sidenavbar-content-wrapper {
+    width: 100%;
+    height: 100vh;
+    /* background-color: blue; */
+    display: flex;
+    top: 10vh;
+    left: 0px;
+    position: fixed;
+
+}
+/*----------------------------- start side navbar-----------------------*/
+.sidebar {
+    width: 5%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    /* background-color: red; */
+
+
+}
+
+
+.sidebar .icon-div {
+    /* background-color: blueviolet; */
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0px;
+    cursor: pointer;
+
+}
+
+.sidebar .icon-div:hover {
+    background-color: rgb(231, 231, 231);
+    color: black;
+
+}
+
+.sidebar .icon-div p {
+    font-size: 10px;
+    font-weight: bold;
+    padding: 5px 0px;
+}
+
+  /*----------------------------- end side navbar-----------------------*/
+
+/*----------------------------- start right main content-----------------------*/
+.main-content-container {
+    width: 95%;
+    height: 100vh;
+    /* background-color: brown; */
+}
+
+.main-content-container .content-sub-navbar {
+    width: 100%;
+    height: 10vh;
+    background-color: white;
+    top: 10vh;
+    left: 5vw;
+    position: fixed;
+    border-bottom: 2px solid rgb(236, 232, 232);
+    border-top: 2px solid rgb(236, 232, 232);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.main-content-container .content-sub-navbar ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* background-color: aqua; */
+}
+
+.main-content-container .content-sub-navbar ul li {
+    list-style: none;
+    background-color: rgb(241, 241, 241);
+    padding: 5px 10px;
+    border-radius: 50px;
+
+}
+.main-content-container .content-sub-navbar ul li:hover {
+    
+    background-color: rgb(233, 233, 233);
+   
+
+}
+
+.main-content-container .content-sub-navbar ul li a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: rgb(63, 60, 60);
+
+}
+
+.main-content-container .content {
+    background-color: rgb(228, 234, 240);
+    padding: 20px;
+    overflow:auto;
+    top: 10vh;
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+}
+/*----------------------------- end right main content-----------------------*/
